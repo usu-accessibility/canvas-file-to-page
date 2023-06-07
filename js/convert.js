@@ -113,7 +113,7 @@ $(document).ready(function() {
                         var imageExtension = (contentType == "image/jpeg")?'.jpg':'.png';
 
                         var formData = new FormData()
-                        formData.append('Authorization', 'Enter the access token here')
+                        formData.append('Authorization', 'Bearer 1009~wFy5eSCdfWWm0jEG2TnBUGdYMrtXjImf8KmDuWmY0ns0XtKy44OgObxVmHzcgO7g')
                         formData.append('parent_folder_path', path)
                         formData.append('display_name', name + imageExtension)
                         formData.append('filename', name + imageExtension)
@@ -145,7 +145,7 @@ $(document).ready(function() {
                                 // POST to the upload_url with the upload_params to start the upload
 
                                 var formData1 = new FormData()
-                                formData1.append('Authorization', 'Enter the access token here')
+                                formData1.append('Authorization', 'Bearer 1009~wFy5eSCdfWWm0jEG2TnBUGdYMrtXjImf8KmDuWmY0ns0XtKy44OgObxVmHzcgO7g')
                                 formData1.append('fileName', fileUrl, name + imageExtension);
 
                                 var upload_url = response.upload_url;
@@ -299,7 +299,7 @@ $(document).ready(function() {
                                     for(var idx = 1;idx <= 10;idx++){
 
                                         var formData5 = new FormData()
-                                        formData5.append('Authorization', 'Enter the access token here')
+                                        formData5.append('Authorization', 'Bearer 1009~DG8gfHpHu80jXy33tP4J523YdBRps5TzMPfe49uMaZXDAkAjTBcmXzrcet7v9Ir4')
                                         formData5.append('name', filename);
                                         formData5.append('parent_folder_path', '/images/converted-files');
                                         formData5.append('on_duplicate', 'overwrite');
@@ -331,7 +331,7 @@ $(document).ready(function() {
                                                     if(flag){
                                                         if(initialFolderId === ""){
                                                             var formData4 = new FormData()
-                                                            formData4.append('Authorization', 'Enter the access token here')
+                                                            formData4.append('Authorization', 'Bearer 1009~DG8gfHpHu80jXy33tP4J523YdBRps5TzMPfe49uMaZXDAkAjTBcmXzrcet7v9Ir4')
                                                             formData4.append('name', 'converted-files');
                                                             formData4.append('parent_folder_path', '/images');
                                                             formData4.append('on_duplicate', 'overwrite');
@@ -394,7 +394,7 @@ $(document).ready(function() {
                                                     }
                                                     else {
                                                         var formData2 = new FormData()
-                                                        formData2.append('Authorization', 'Enter the access token here')
+                                                        formData2.append('Authorization', 'Bearer 1009~DG8gfHpHu80jXy33tP4J523YdBRps5TzMPfe49uMaZXDAkAjTBcmXzrcet7v9Ir4')
                                                         formData2.append('name', 'images')
                                                         formData2.append('parent_folder_path', '/')
 
@@ -408,7 +408,7 @@ $(document).ready(function() {
                                                                 console.log('Created images folder successfully');
 
                                                                 var formData4 = new FormData()
-                                                                formData4.append('Authorization', 'Enter the access token here')
+                                                                formData4.append('Authorization', 'Bearer 1009~DG8gfHpHu80jXy33tP4J523YdBRps5TzMPfe49uMaZXDAkAjTBcmXzrcet7v9Ir4')
                                                                 formData4.append('name', 'converted-files');
                                                                 formData4.append('parent_folder_path', '/images');
                                                                 formData4.append('on_duplicate', 'overwrite');

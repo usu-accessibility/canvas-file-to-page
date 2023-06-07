@@ -44,11 +44,11 @@
     *******************/
 
         /* You will need your unique Ally institutional ID. This can be found by looking in your Ally LTI settings in the launch URL setting. If your launch URL is https://prod.ally.ac/api/v1/4/lti/institution then the institutional ID would be 4 */
-        $allyID=;
+        $allyID=4;
 
         /* When Ally was installed at your institution, a Consumer Key and Shared Secret was generated for you from Blackboard that you used to install Ally in Canvas. These values are needed to access the Ally API */
-        $consumerKey='';
-        $sharedSecret='';
+        $consumerKey='AuhrvZqzeNaOThn8zvrHm8iU5rr9Rqp9';
+        $sharedSecret='pvxo/WdRG7cgVcphkANqgudcdFP0zWRL';
 
     /***********************
     *  END CONFIGURATION  *
@@ -75,7 +75,7 @@
                 'path'       => $url,
                 'parameters' => array(
                     'acceptTOU' => 'true',
-		    'asAttachment' => 'true',	
+                    'asAttachment' => 'true',
                     'role' => 'administrator',
                     'userId' => '1'
                 ),
@@ -97,6 +97,7 @@
 
             curl_close($ch);
             $obj = json_decode($r);
+        	// var_dump($r);
             // print json_encode($obj);
             if (isset($obj->{'url'})) {
 
@@ -122,10 +123,9 @@
         libxml_use_internal_errors(true);
         $html_string  =  file_get_contents($url);
         // Identify all images and replace them with '[image]' 
-        $html_string = preg_replace("/<img[^>]+\>/i", " [image] ", $html_string);
-        $page_dom->loadHTML($html_string); 
+        // $html_string = preg_replace("/<img[^>]+\>/i", " [image] ", $html_string);
+        $page_dom->loadHTML($html_string);
         $body = $page_dom->getElementsByTagName('body')->item(0);
-
         foreach ($body->childNodes as $child){
             $body_dom->appendChild($body_dom->importNode($child, true));
         }
@@ -142,8 +142,10 @@
                 $title = $list->item(0)->textContent;
             }
         }
-
         echo  $title .'|~|'.$file_body;
 
      }
+
+
 ?>
+
