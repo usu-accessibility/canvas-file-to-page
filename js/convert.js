@@ -209,7 +209,7 @@ $(document).ready(function() {
                     var data_info = htmlString.split('|~|');
                         
                     if (data_info[0] === "") {
-                        var page_tite = fileName;
+                        var page_tite = fileName.split(".")[0];
                     } else {
                         var page_tite = data_info[0];
                     }
