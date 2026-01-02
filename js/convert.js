@@ -13,8 +13,7 @@
 *******************/
 
 // Define the full URL where the action.php script is installed
-var scriptURL = 'https://elearn.usu.edu/accessibility/file_to_page/'
-
+var scriptURL = 'https://elearn.usu.edu/accessibility/file_to_page/';
 
 /***********************
 *  END CONFIGURATION  *

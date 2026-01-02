@@ -18,6 +18,20 @@
     require_once __DIR__.'/simple_html_dom.php';
     require_once __DIR__.'/OAuthSimple.php';
 
+    // Load config
+    if (!file_exists('config.php')) {
+        die('Error: Configuration file missing. Please rename config.sample.php to config.php.');
+    }
+    $config = require 'config.php';
+
+    // Access variables
+    /* When Ally was installed at your institution, a Consumer Key and Shared Secret was generated for you from Blackboard that you used to install Ally in Canvas. These values are needed to access the Ally API */
+    $consumerKey = $config['consumerKey'];
+    $sharedSecret = $config['sharedSecret'];
+
+    /* You will need your unique Ally institutional ID. This can be found by looking in your Ally LTI settings in the launch URL setting. If your launch URL is https://prod.ally.ac/api/v1/4/lti/institution then the institutional ID would be 4 */
+    $allyID = $config['allyID'];
+
     // Sets up a framework for tasks to be received from the Javascript. Currently there is only one task, but additional tasks may be added in the future.
     $task = '';
     if (isset($_POST['task'])) {
@@ -43,12 +57,10 @@
     *  CONFIGURATION  *
     *******************/
 
-        /* You will need your unique Ally institutional ID. This can be found by looking in your Ally LTI settings in the launch URL setting. If your launch URL is https://prod.ally.ac/api/v1/4/lti/institution then the institutional ID would be 4 */
         $allyID=4;
 
-        /* When Ally was installed at your institution, a Consumer Key and Shared Secret was generated for you from Blackboard that you used to install Ally in Canvas. These values are needed to access the Ally API */
-        $consumerKey='AuhrvZqzeNaOThn8zvrHm8iU5rr9Rqp9';
-        $sharedSecret='pvxo/WdRG7cgVcphkANqgudcdFP0zWRL';
+        $consumerKey=getenv('consumerKey');
+        $sharedSecret=getenv('sharedSecret');
 
     /***********************
     *  END CONFIGURATION  *

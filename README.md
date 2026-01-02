@@ -22,7 +22,7 @@ Installation Instructions
 ------------
 
 1. Download this repository as a zip.
-2. Complete the Configuration sections at the top of [convert.js] and found partway down [action.php] the file. If needed, some of the information required can be found in the LTI settings for Ally (Admin > Settings > App > View App Configurations). 
+2. Complete the Configuration sections at the top of [convert.js]. Also complete the [config.sample.php] file to configure [action.php]. If needed, some of the information required can be found in the LTI settings for Ally (Admin > Settings > App > View App Configurations). 
 3. Upload these files to a server. 
 4. Then you will need to add a reference the [convert.js] file in your Canvas global JavaScript using [these instructions for updating your JavaScript](https://community.canvaslms.com/docs/DOC-10862-4214724282) using the following JavaScript: 
 
