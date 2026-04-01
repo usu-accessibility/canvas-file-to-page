@@ -8,7 +8,8 @@ Limitations
 -----------
 
 * The tool currently works with content that has a mime content of PDF, Doc or PPT. 
-* The utility does not convert images contained within files to Canvas pages.  
+* The utility does not convert images contained within files to Canvas pages.
+* Must use the old canvas files page
 
 Contributions are welcome! 
 
