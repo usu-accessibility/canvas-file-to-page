@@ -1,7 +1,7 @@
 Ally File to Canvas Page
 ==============================
 
-* *Ally File to Canvas Page* is a utility that utilizes the API from [Blackboard Ally](https://www.blackboard.com/accessibility/blackboard-ally.html) to convert files to Canvas pages. 
+* *Ally File to Canvas Page* is a utility that utilizes the API from [Blackboard Ally](https://www.blackboard.com/solutions/ally) to convert files to Canvas pages. 
 * [View a video of the tool in action here](https://www.youtube.com/watch?v=j4ssfY_PVqE).
   
 Limitations
@@ -17,7 +17,15 @@ Contributions are welcome!
 Requirements
 ------------
 
-* PHP 5.3 or higher 
+* PHP 5.4 or higher 
+
+Tech Stack
+----------
+
+* **Canvas Files page integration:** JavaScript, jQuery, and jQuery UI.
+* **Server-side processing:** PHP, using cURL for HTTP requests and `DOMDocument` for HTML parsing.
+* **Libraries:** OAuthSimple for OAuth signing.
+* **External services:** Canvas REST API, Blackboard Ally API, and the AWS-hosted `parseHtml` endpoint.
 
 Installation Instructions
 ------------
